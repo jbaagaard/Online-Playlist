@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace PlaylistBackend
 {
     public class Song
@@ -5,14 +7,14 @@ namespace PlaylistBackend
         public Song(string url)
         {
             Url = url;
-            VotesToSkip = 0;
-            Votes = 0;
+            VotesToSkip = new List<string>();
+            Votes = new List<string>();
             Skipped = false;
         }
 
         public string Url;
-        public int Votes;
+        public List<string> Votes;
         public bool Skipped;
-        public int VotesToSkip;
+        public List<string> VotesToSkip;
     }
 }
