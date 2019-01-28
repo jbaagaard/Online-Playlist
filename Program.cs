@@ -11,6 +11,8 @@ namespace PlaylistBackend
         {
             Console.WriteLine(RoomManager.AddRoom(new Room("room")));
             Console.WriteLine(RoomManager.AddRoom(new Room("room")));
+            var testRoom = RoomManager.GetRoom("room");
+            var testRoom2 = RoomManager.GetRoom("room2");
                    
             
             

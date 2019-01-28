@@ -28,6 +28,8 @@ namespace PlaylistBackend
                     await res.SendStatus(HttpStatusCode.BadRequest);
                 }
             });
+            
+            
             await server.RunAsync();
         }
     }

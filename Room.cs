@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
 namespace PlaylistBackend
@@ -14,5 +16,23 @@ namespace PlaylistBackend
         {
             Url = url;
         }
+
+        public bool AddSong(string url)
+        {
+            if (validSong(url))
+            {
+                SongQueue.Add(new Song(url));
+                return true;
+            }
+            else
+                return false;
+        }
+
+        public bool validSong(string url)
+        {
+            return true;
+        }
+        
+        
     }
 }

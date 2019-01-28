@@ -2,8 +2,17 @@ namespace PlaylistBackend
 {
     public class Song
     {
-        public string Url { get; set; }
-        public int Votes{ get; set; }
-        public bool Skipped { get; set; }
+        public Song(string url)
+        {
+            Url = url;
+            VotesToSkip = 0;
+            Votes = 0;
+            Skipped = false;
+        }
+
+        public string Url;
+        public int Votes;
+        public bool Skipped;
+        public int VotesToSkip;
     }
 }

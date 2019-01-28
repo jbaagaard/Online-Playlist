@@ -22,6 +22,12 @@ namespace PlaylistBackend
             
         }
 
+        public static Room GetRoom(string url)
+        {
+            var room = Rooms.Find(x => x.Url == url);
+            return room;
+        }
+
         static bool CheckUrl(string url)
         {
             return Rooms.All(x => x.Url != url);
