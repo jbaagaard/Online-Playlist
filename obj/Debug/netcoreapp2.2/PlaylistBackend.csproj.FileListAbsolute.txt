@@ -1,0 +1,11 @@
+C:\Users\Jenno\RiderProjects\PlaylistBackend\bin\Debug\netcoreapp2.2\PlaylistBackend.deps.json
+C:\Users\Jenno\RiderProjects\PlaylistBackend\bin\Debug\netcoreapp2.2\PlaylistBackend.runtimeconfig.json
+C:\Users\Jenno\RiderProjects\PlaylistBackend\bin\Debug\netcoreapp2.2\PlaylistBackend.runtimeconfig.dev.json
+C:\Users\Jenno\RiderProjects\PlaylistBackend\bin\Debug\netcoreapp2.2\PlaylistBackend.dll
+C:\Users\Jenno\RiderProjects\PlaylistBackend\bin\Debug\netcoreapp2.2\PlaylistBackend.pdb
+C:\Users\Jenno\RiderProjects\PlaylistBackend\obj\Debug\netcoreapp2.2\PlaylistBackend.csprojAssemblyReference.cache
+C:\Users\Jenno\RiderProjects\PlaylistBackend\obj\Debug\netcoreapp2.2\PlaylistBackend.csproj.CoreCompileInputs.cache
+C:\Users\Jenno\RiderProjects\PlaylistBackend\obj\Debug\netcoreapp2.2\PlaylistBackend.AssemblyInfoInputs.cache
+C:\Users\Jenno\RiderProjects\PlaylistBackend\obj\Debug\netcoreapp2.2\PlaylistBackend.AssemblyInfo.cs
+C:\Users\Jenno\RiderProjects\PlaylistBackend\obj\Debug\netcoreapp2.2\PlaylistBackend.dll
+C:\Users\Jenno\RiderProjects\PlaylistBackend\obj\Debug\netcoreapp2.2\PlaylistBackend.pdb
