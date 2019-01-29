@@ -15,6 +15,13 @@ namespace PlaylistBackend
                 RespondWithExceptionDetails = true
             };
             
+            server.WebSocket("/api/:room", async (req, wsd) =>
+            {
+                wsd.SendText("Hello World");
+                wsd.OnTextReceived += (sender, eventArgs) => { wsd.SendText(eventArgs.Text);};
+            });
+            /*
+
             server.Post("/api/create-room", async (req, res) =>
             {
                 var form = await req.GetFormDataAsync();
@@ -30,7 +37,7 @@ namespace PlaylistBackend
                 }
             });
 
-            server.Post("/:roomUrl/add-song", async (req, res) =>
+            server.Post("/api/:room/add-song", async (req, res) =>
             {
                 var form = await req.GetFormDataAsync();
                 string url = form["url"];
@@ -47,7 +54,7 @@ namespace PlaylistBackend
             });
 
             
-            server.Post("/:roomUrl", async (req, res) =>
+            server.Get("/room/:roomUrl", async (req, res) =>
             {
                 var room = RoomManager.GetRoom(req.Parameters["roomUrl"]);
                 if (room != null)
@@ -58,7 +65,7 @@ namespace PlaylistBackend
                 {
                     await res.SendStatus(HttpStatusCode.BadRequest);
                 }
-            });
+            });*/
             
             await server.RunAsync();
         }
