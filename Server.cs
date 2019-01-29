@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Net;
+using System.Net.WebSockets;
 using System.Threading.Tasks;
 using Red;
 
@@ -28,7 +29,36 @@ namespace PlaylistBackend
                     await res.SendStatus(HttpStatusCode.BadRequest);
                 }
             });
+
+            server.Post("/:roomUrl/add-song", async (req, res) =>
+            {
+                var form = await req.GetFormDataAsync();
+                string url = form["url"];
+                var room = RoomManager.GetRoom(req.Parameters["roomUrl"]);
+                if (room != null)
+                {
+                    if(room.AddSong(url))
+                        await res.SendStatus(HttpStatusCode.OK);
+                    else
+                        await res.SendStatus(HttpStatusCode.BadRequest);
+                }
+                else
+                    await res.SendStatus(HttpStatusCode.BadRequest);
+            });
+
             
+            server.Post("/:roomUrl", async (req, res) =>
+            {
+                var room = RoomManager.GetRoom(req.Parameters["roomUrl"]);
+                if (room != null)
+                {
+                    await res.SendJson(room);
+                }
+                else
+                {
+                    await res.SendStatus(HttpStatusCode.BadRequest);
+                }
+            });
             
             await server.RunAsync();
         }

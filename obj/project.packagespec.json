@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\Jenno\\RiderProjects\\PlaylistBackend\\PlaylistBackend.csproj",
+    "projectUniqueName": "C:\\Users\\Jenno\\Dropbox\\prog\\sw701\\Online-Playlist\\PlaylistBackend.csproj",
     "projectName": "PlaylistBackend",
-    "projectPath": "C:\\Users\\Jenno\\RiderProjects\\PlaylistBackend\\PlaylistBackend.csproj",
-    "outputPath": "C:\\Users\\Jenno\\RiderProjects\\PlaylistBackend\\obj\\",
+    "projectPath": "C:\\Users\\Jenno\\Dropbox\\prog\\sw701\\Online-Playlist\\PlaylistBackend.csproj",
+    "outputPath": "C:\\Users\\Jenno\\Dropbox\\prog\\sw701\\Online-Playlist\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

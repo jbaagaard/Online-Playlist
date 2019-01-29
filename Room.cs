@@ -30,10 +30,14 @@ namespace PlaylistBackend
                 return false;
         }
 
-        public bool NextSong()
+        public bool NextSong(bool skipped = false)
         {
             if (_songQueue.Count > 0)
             {
+                if (skipped)
+                {
+                    _songQueue.First().Skipped = true;
+                }
                 _history.Add(_songQueue.First());
                 _songQueue.RemoveAt(0);
                 return true;
