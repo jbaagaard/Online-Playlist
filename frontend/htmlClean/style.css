@@ -1,0 +1,141 @@
+:root{
+    --accent-spotify-color: #65D36E;
+    --accent-youtube-color: #EB3323;
+    --dark-color: #2B2D42;
+    --medium-color: #8D99AE;
+    --light-color: #EDF2F4;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+input, button{
+    border:none;
+
+}
+
+html,body,#wrapper{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#menu-logo{
+    margin-top: 60px;
+    margin-left: 60px;
+    width: 140px;
+    height: 100px;
+}
+
+#menu-logo::before{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 7px;
+    width: 110px;
+    background-color: var(--medium-color);
+}
+
+#menu-logo::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 7px;
+    width: 110px;
+    margin-top: 46px;
+    background-color: var(--medium-color);
+}
+
+#sidebar-overlay{
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,0.4);
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+.sidebar{
+    transition: width 0.3s;
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    background-color: var(--light-color);
+    z-index: 2;
+    box-shadow: 0px 0px 28px 0px rgba(0,0,0,0.40);
+}
+
+.sidebar.hidden{
+    width: 0;
+}
+
+#sidebar-header{
+    z-index: 2;
+    width: 100%;
+    height: 200px;
+    background-color: var(--dark-color);
+}
+
+#wrapper{
+    position: relative;
+    background-color: var(--light-color);
+}
+
+.footer{
+    transition: bottom 500ms ease;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60%;
+}
+
+.footer.hide{
+    bottom: -60%;
+}
+
+#youtube-logo{
+    fill: white !important;
+    color: white !important;
+    height: 50%;
+}
+
+#spotify-logo{
+    fill: white !important;
+    color: white !important;
+    height: 50%;
+}
+
+#youtube-search-button{
+    float: left;
+    position: relative;
+    top: -8%;
+    height: 9%;
+    border-radius: 0 0 0 0;
+    width: 50%;
+    background-color: var(--accent-youtube-color);
+}
+
+#spotify-search-button{
+    border-radius: 0 0 0 0;
+    float: left;
+    position: relative;
+    top: -8%;
+    height: 9%;
+    width: 50%;
+    background-color: var(--accent-spotify-color);
+}
+
+.youtube-selected{
+    background-color: var(--accent-youtube-color);
+}
+
+.spotify-selected{
+    background-color: var(--accent-spotify-color);
+}
+
+#search-content{
+    position: absolute;
+}
